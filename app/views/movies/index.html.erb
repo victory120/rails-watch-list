@@ -1,0 +1,12 @@
+<h1>All Movies</h1>
+
+<ul>
+  <% @movies.each do |movie| %>
+    <li>
+      <strong>Title:</strong> <%= movie.title %><br>
+      <strong>Overview:</strong> <%= movie.overview %><br>
+      <strong>Poster URL:</strong> <%= movie.poster_url %><br>
+      <strong>Rating:</strong> <%= movie.rating %>
+    </li>
+  <% end %>
+</ul>
