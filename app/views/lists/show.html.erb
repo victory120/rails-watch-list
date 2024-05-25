@@ -1,0 +1,17 @@
+<div class="container">
+  <h1>List: <%= @list.name %></h1>
+  <div class="movie-list-container">
+    <% @list.movies.each do |movie| %>
+      <div class="movie">
+        <h4>Title: <%= movie.title %></h4>
+        <div class="overview">
+          <%= image_tag movie.poster_url, class: "img-fluid", style: "max-height: 200px;" %>
+          <div class="description">
+            <p><strong>Overview:</strong> <%= movie.overview %></p>
+            <p><strong>Rating:</strong> <%= movie.rating %></p>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
